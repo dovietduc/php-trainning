@@ -2,7 +2,7 @@
 
 // thêm định tuyến với path là gì, sẽ load ra controller, action là gì?
 $routeinstance->addRoute(
-    '/new/post/{id}',
+    '/',
     [
         'controller' => 'App\Http\Controllers\HomeController',
         'action' => 'index'
@@ -15,3 +15,21 @@ $routeinstance->addRoute(
         'action' => 'index'
     ]
 );
+
+// add product
+$routeinstance->addRoute(
+    '/product/add',
+    [
+        'controller' => 'App\Http\Controllers\HomeController',
+        'action' => 'create'
+    ]
+);
+$routeinstance->addRoute(
+    '/product/edit',
+    [
+        'controller' => 'App\Http\Controllers\HomeController',
+        'action' => 'edit'
+    ]
+);
+
+
