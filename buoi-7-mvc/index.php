@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // 1. require file autoload
 require __DIR__ . '/autoload/autoload.php';
 

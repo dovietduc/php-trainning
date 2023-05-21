@@ -12,8 +12,15 @@ class HomeController {
         $productModel = new Product();
         $products = $productModel->get();
 
+
+        if(isset($_SESSION['message'])) {
+            $message = $_SESSION['message'];
+            unset($_SESSION['message']);
+        }
+        
         View::render('home/index.php', [
             'productInfor' => $products,
+            'message' => $message ?? null
         ]);
     }
 
@@ -30,10 +37,12 @@ class HomeController {
                 'description' => $_POST['description']
             ]);
             // reirect to proiduct list
+            $_SESSION['message'] = "them du lieu thanh cong";
             header("Location: /");
 
         }
 
+        
         View::render('home/create.php');
     }
 

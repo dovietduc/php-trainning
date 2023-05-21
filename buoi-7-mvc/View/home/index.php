@@ -21,6 +21,15 @@
         <div class="row">
             <h2 class="mt-3">List Product</h2>
 
+            <?php if($message) { ?>
+
+                <div class="alert alert-success" role="alert">
+                    <?php echo $message ?>
+                </div>
+
+            <?php } ?>
+            
+
             <table class="table">
                 <thead>
                     <tr>

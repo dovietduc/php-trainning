@@ -280,7 +280,7 @@ class BaseModel {
     public function connectPdo() 
     {
         $host = '127.0.0.1';
-        $db   = 'mvc_crud';
+        $db   = 'test';
         $user = 'root';
         $pass = '';
         $port = "3306";
